@@ -53,7 +53,7 @@ TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 TARGET_KERNEL_SOURCE := kernel/htc/msm8974
 
 # QCOM hardware
-BOARD_USES_QCOM_HARDWARE := true
+#BOARD_USES_QCOM_HARDWARE := true
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
