@@ -46,7 +46,6 @@ PRODUCT_PACKAGES += \
 
 # Qcom init scripts for /etc
 PRODUCT_PACKAGES += \
-   init.qcom.bt.bluedroid.sh \
    init.qcom.bt.sh \
    init.qcom.ril.sh
 
@@ -110,10 +109,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_log
 
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
+
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf \
-    $(LOCAL_PATH)/configs/flp.conf:system/etc/flp.conf
+    $(LOCAL_PATH)/configs/flp.conf:system/etc/flp.conf \
+    $(LOCAL_PATH)/configs/izat.conf:system/etc/izat.conf \
+    $(LOCAL_PATH)/configs/sap.conf:system/etc/sap.conf
 
 # Graphics
 PRODUCT_PACKAGES += \
@@ -195,8 +200,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.msm8974
 
-# Radio
+# RIL
 PRODUCT_PACKAGES += \
+    libcnefeatureconfig \
+    librmnetctl \
     libxml2
 
 # Thermal
